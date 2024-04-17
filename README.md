@@ -1,3 +1,9 @@
+## About
+
+A simple web app to swap or bridge token
+
+Tools: Squid router (https://docs.squidrouter.com/)
+
 ## Getting Started
 
 First, set the environment in file .env
