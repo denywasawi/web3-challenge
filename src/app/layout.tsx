@@ -20,20 +20,22 @@ export default function RootLayout({
         <React.StrictMode>
           <Provider store={store}>
             <NextUIProvider>
-              <MetaMaskUIProvider
-                sdkOptions={{
-                  dappMetadata: {
-                    name: "Example React UI Dapp",
-                    url:
-                      typeof window !== "undefined"
-                        ? window?.location?.href
-                        : "",
-                  },
-                  infuraAPIKey: "14bb0a14eddb4c89a0aa332c23ba1f68",
-                }}
-              >
-                {children}
-              </MetaMaskUIProvider>
+              <main className="dark text-foreground bg-background">
+                <MetaMaskUIProvider
+                  sdkOptions={{
+                    dappMetadata: {
+                      name: "Example React UI Dapp",
+                      url:
+                        typeof window !== "undefined"
+                          ? window?.location?.href
+                          : "",
+                    },
+                    infuraAPIKey: "14bb0a14eddb4c89a0aa332c23ba1f68",
+                  }}
+                >
+                  {children}
+                </MetaMaskUIProvider>
+              </main>
             </NextUIProvider>
           </Provider>
         </React.StrictMode>
